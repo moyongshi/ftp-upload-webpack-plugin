@@ -1,0 +1,5 @@
+tsconfig.json
+lib
+dist
+node_modules
+.docz

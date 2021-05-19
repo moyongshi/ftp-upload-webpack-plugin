@@ -1,0 +1,70 @@
+{
+  "name": "ftp-upload-webpack-plugin",
+  "version": "0.0.0",
+  "description": "打包上传到ftp的Webpack插件",
+  "main": "index.ts",
+  "types": "src/types",
+  "scripts": {
+    "prepare": "husky install",
+    "dev with doc": "father doc dev",
+    "build": "father build",
+    "build doc": "father doc build",
+    "deploy doc to github.io": "father doc deploy",
+    "test": "father test",
+    "format": "eslint -c .eslintrc.js --ext .ts,.tsx {src,scripts}/**/*.{ts,tsx} --fix",
+    "first-release": "standard-version --first-release",
+    "prerelease": "standard-version --prerelease alpha",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch",
+    "publish": "git push --follow-tags origin UI && npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "format",
+      "commit-msg": "commitlint -c .commitlintrc.js -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyongshi/ftp-upload-webpack-plugin.git"
+  },
+  "keywords": [
+    "ftp",
+    "upload",
+    "webpack",
+    "plugin"
+  ],
+  "author": "莫永史",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moyongshi/ftp-upload-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/moyongshi/ftp-upload-webpack-plugin#readme",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "webpack": ">=4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "father": "^2.30.5",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.0",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "basic-ftp": "^4.6.6"
+  }
+}
