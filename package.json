@@ -19,9 +19,6 @@
     "release-patch": "standard-version --release-as patch",
     "publish": "git push --follow-tags origin UI && npm publish"
   },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --fix"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moyongshi/ftp-upload-webpack-plugin.git"
