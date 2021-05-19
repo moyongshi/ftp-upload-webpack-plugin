@@ -19,12 +19,6 @@
     "release-patch": "standard-version --release-as patch",
     "publish": "git push --follow-tags origin UI && npm publish"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "format",
-      "commit-msg": "commitlint -c .commitlintrc.js -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --fix"
   },
@@ -51,6 +45,8 @@
     "webpack": ">=4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "cross-env": "^7.0.3",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
